@@ -40,8 +40,6 @@
       $numeric_fields = array(
         $_POST['cvc_code'] => 'CVC code',
         $_POST['card_number'] => 'card number',
-        $_POST['start_year'] => 'start year',
-        $_POST['start_month'] => 'start month',
         $_POST['end_year'] => 'expiration year',
         $_POST['end_month'] => 'expiration month');
 
@@ -74,13 +72,7 @@
         }
       }
 
-      if ($error){
-        // Do nothing
-      } else {
-        // Accept and redirect.
-        echo "Processing";
-        //header('Location: successful.php');
-      }
+      validate_pass($error);
 
     ?>
 
